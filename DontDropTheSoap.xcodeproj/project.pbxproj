@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE4A1E0A1BF50B9C00F62B4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E091BF50B9C00F62B4E /* main.m */; };
+		EE4A1E0D1BF50B9C00F62B4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E0C1BF50B9C00F62B4E /* AppDelegate.m */; };
+		EE4A1E101BF50B9C00F62B4E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E0F1BF50B9C00F62B4E /* GameScene.m */; };
+		EE4A1E121BF50B9C00F62B4E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EE4A1E111BF50B9C00F62B4E /* GameScene.sks */; };
+		EE4A1E151BF50B9C00F62B4E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E141BF50B9C00F62B4E /* GameViewController.m */; };
+		EE4A1E181BF50B9C00F62B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4A1E161BF50B9C00F62B4E /* Main.storyboard */; };
+		EE4A1E1A1BF50B9C00F62B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4A1E191BF50B9C00F62B4E /* Assets.xcassets */; };
+		EE4A1E1D1BF50B9C00F62B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4A1E1B1BF50B9C00F62B4E /* LaunchScreen.storyboard */; };
+		EE4A1E281BF50B9C00F62B4E /* DontDropTheSoapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E271BF50B9C00F62B4E /* DontDropTheSoapTests.m */; };
+		EE4A1E331BF50B9D00F62B4E /* DontDropTheSoapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A1E321BF50B9D00F62B4E /* DontDropTheSoapUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE4A1E241BF50B9C00F62B4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE4A1DFD1BF50B9C00F62B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4A1E041BF50B9C00F62B4E;
+			remoteInfo = DontDropTheSoap;
+		};
+		EE4A1E2F1BF50B9D00F62B4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE4A1DFD1BF50B9C00F62B4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4A1E041BF50B9C00F62B4E;
+			remoteInfo = DontDropTheSoap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE4A1E051BF50B9C00F62B4E /* DontDropTheSoap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontDropTheSoap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4A1E091BF50B9C00F62B4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE4A1E0B1BF50B9C00F62B4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE4A1E0C1BF50B9C00F62B4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE4A1E0E1BF50B9C00F62B4E /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		EE4A1E0F1BF50B9C00F62B4E /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		EE4A1E111BF50B9C00F62B4E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EE4A1E131BF50B9C00F62B4E /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		EE4A1E141BF50B9C00F62B4E /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		EE4A1E171BF50B9C00F62B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE4A1E191BF50B9C00F62B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE4A1E1C1BF50B9C00F62B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE4A1E1E1BF50B9C00F62B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4A1E231BF50B9C00F62B4E /* DontDropTheSoapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontDropTheSoapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4A1E271BF50B9C00F62B4E /* DontDropTheSoapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DontDropTheSoapTests.m; sourceTree = "<group>"; };
+		EE4A1E291BF50B9C00F62B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4A1E2E1BF50B9D00F62B4E /* DontDropTheSoapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontDropTheSoapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4A1E321BF50B9D00F62B4E /* DontDropTheSoapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DontDropTheSoapUITests.m; sourceTree = "<group>"; };
+		EE4A1E341BF50B9D00F62B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE4A1E021BF50B9C00F62B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E201BF50B9C00F62B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E2B1BF50B9D00F62B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE4A1DFC1BF50B9C00F62B4E = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E071BF50B9C00F62B4E /* DontDropTheSoap */,
+				EE4A1E261BF50B9C00F62B4E /* DontDropTheSoapTests */,
+				EE4A1E311BF50B9D00F62B4E /* DontDropTheSoapUITests */,
+				EE4A1E061BF50B9C00F62B4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE4A1E061BF50B9C00F62B4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E051BF50B9C00F62B4E /* DontDropTheSoap.app */,
+				EE4A1E231BF50B9C00F62B4E /* DontDropTheSoapTests.xctest */,
+				EE4A1E2E1BF50B9D00F62B4E /* DontDropTheSoapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE4A1E071BF50B9C00F62B4E /* DontDropTheSoap */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E0B1BF50B9C00F62B4E /* AppDelegate.h */,
+				EE4A1E0C1BF50B9C00F62B4E /* AppDelegate.m */,
+				EE4A1E0E1BF50B9C00F62B4E /* GameScene.h */,
+				EE4A1E0F1BF50B9C00F62B4E /* GameScene.m */,
+				EE4A1E111BF50B9C00F62B4E /* GameScene.sks */,
+				EE4A1E131BF50B9C00F62B4E /* GameViewController.h */,
+				EE4A1E141BF50B9C00F62B4E /* GameViewController.m */,
+				EE4A1E161BF50B9C00F62B4E /* Main.storyboard */,
+				EE4A1E191BF50B9C00F62B4E /* Assets.xcassets */,
+				EE4A1E1B1BF50B9C00F62B4E /* LaunchScreen.storyboard */,
+				EE4A1E1E1BF50B9C00F62B4E /* Info.plist */,
+				EE4A1E081BF50B9C00F62B4E /* Supporting Files */,
+			);
+			path = DontDropTheSoap;
+			sourceTree = "<group>";
+		};
+		EE4A1E081BF50B9C00F62B4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E091BF50B9C00F62B4E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE4A1E261BF50B9C00F62B4E /* DontDropTheSoapTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E271BF50B9C00F62B4E /* DontDropTheSoapTests.m */,
+				EE4A1E291BF50B9C00F62B4E /* Info.plist */,
+			);
+			path = DontDropTheSoapTests;
+			sourceTree = "<group>";
+		};
+		EE4A1E311BF50B9D00F62B4E /* DontDropTheSoapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1E321BF50B9D00F62B4E /* DontDropTheSoapUITests.m */,
+				EE4A1E341BF50B9D00F62B4E /* Info.plist */,
+			);
+			path = DontDropTheSoapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE4A1E041BF50B9C00F62B4E /* DontDropTheSoap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4A1E371BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoap" */;
+			buildPhases = (
+				EE4A1E011BF50B9C00F62B4E /* Sources */,
+				EE4A1E021BF50B9C00F62B4E /* Frameworks */,
+				EE4A1E031BF50B9C00F62B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DontDropTheSoap;
+			productName = DontDropTheSoap;
+			productReference = EE4A1E051BF50B9C00F62B4E /* DontDropTheSoap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE4A1E221BF50B9C00F62B4E /* DontDropTheSoapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4A1E3A1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapTests" */;
+			buildPhases = (
+				EE4A1E1F1BF50B9C00F62B4E /* Sources */,
+				EE4A1E201BF50B9C00F62B4E /* Frameworks */,
+				EE4A1E211BF50B9C00F62B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4A1E251BF50B9C00F62B4E /* PBXTargetDependency */,
+			);
+			name = DontDropTheSoapTests;
+			productName = DontDropTheSoapTests;
+			productReference = EE4A1E231BF50B9C00F62B4E /* DontDropTheSoapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE4A1E2D1BF50B9D00F62B4E /* DontDropTheSoapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4A1E3D1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapUITests" */;
+			buildPhases = (
+				EE4A1E2A1BF50B9D00F62B4E /* Sources */,
+				EE4A1E2B1BF50B9D00F62B4E /* Frameworks */,
+				EE4A1E2C1BF50B9D00F62B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4A1E301BF50B9D00F62B4E /* PBXTargetDependency */,
+			);
+			name = DontDropTheSoapUITests;
+			productName = DontDropTheSoapUITests;
+			productReference = EE4A1E2E1BF50B9D00F62B4E /* DontDropTheSoapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE4A1DFD1BF50B9C00F62B4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Derik Flanary";
+				TargetAttributes = {
+					EE4A1E041BF50B9C00F62B4E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EE4A1E221BF50B9C00F62B4E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EE4A1E041BF50B9C00F62B4E;
+					};
+					EE4A1E2D1BF50B9D00F62B4E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EE4A1E041BF50B9C00F62B4E;
+					};
+				};
+			};
+			buildConfigurationList = EE4A1E001BF50B9C00F62B4E /* Build configuration list for PBXProject "DontDropTheSoap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE4A1DFC1BF50B9C00F62B4E;
+			productRefGroup = EE4A1E061BF50B9C00F62B4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE4A1E041BF50B9C00F62B4E /* DontDropTheSoap */,
+				EE4A1E221BF50B9C00F62B4E /* DontDropTheSoapTests */,
+				EE4A1E2D1BF50B9D00F62B4E /* DontDropTheSoapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE4A1E031BF50B9C00F62B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4A1E121BF50B9C00F62B4E /* GameScene.sks in Resources */,
+				EE4A1E1D1BF50B9C00F62B4E /* LaunchScreen.storyboard in Resources */,
+				EE4A1E1A1BF50B9C00F62B4E /* Assets.xcassets in Resources */,
+				EE4A1E181BF50B9C00F62B4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E211BF50B9C00F62B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E2C1BF50B9D00F62B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE4A1E011BF50B9C00F62B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4A1E151BF50B9C00F62B4E /* GameViewController.m in Sources */,
+				EE4A1E0D1BF50B9C00F62B4E /* AppDelegate.m in Sources */,
+				EE4A1E101BF50B9C00F62B4E /* GameScene.m in Sources */,
+				EE4A1E0A1BF50B9C00F62B4E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E1F1BF50B9C00F62B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4A1E281BF50B9C00F62B4E /* DontDropTheSoapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4A1E2A1BF50B9D00F62B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4A1E331BF50B9D00F62B4E /* DontDropTheSoapUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE4A1E251BF50B9C00F62B4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE4A1E041BF50B9C00F62B4E /* DontDropTheSoap */;
+			targetProxy = EE4A1E241BF50B9C00F62B4E /* PBXContainerItemProxy */;
+		};
+		EE4A1E301BF50B9D00F62B4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE4A1E041BF50B9C00F62B4E /* DontDropTheSoap */;
+			targetProxy = EE4A1E2F1BF50B9D00F62B4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE4A1E161BF50B9C00F62B4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4A1E171BF50B9C00F62B4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE4A1E1B1BF50B9C00F62B4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4A1E1C1BF50B9C00F62B4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE4A1E351BF50B9D00F62B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE4A1E361BF50B9D00F62B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE4A1E381BF50B9D00F62B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DontDropTheSoap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE4A1E391BF50B9D00F62B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DontDropTheSoap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE4A1E3B1BF50B9D00F62B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = DontDropTheSoapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DontDropTheSoap.app/DontDropTheSoap";
+			};
+			name = Debug;
+		};
+		EE4A1E3C1BF50B9D00F62B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DontDropTheSoapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DontDropTheSoap.app/DontDropTheSoap";
+			};
+			name = Release;
+		};
+		EE4A1E3E1BF50B9D00F62B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = DontDropTheSoapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DontDropTheSoap;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EE4A1E3F1BF50B9D00F62B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DontDropTheSoapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DontDropTheSoap;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE4A1E001BF50B9C00F62B4E /* Build configuration list for PBXProject "DontDropTheSoap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4A1E351BF50B9D00F62B4E /* Debug */,
+				EE4A1E361BF50B9D00F62B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4A1E371BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4A1E381BF50B9D00F62B4E /* Debug */,
+				EE4A1E391BF50B9D00F62B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE4A1E3A1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4A1E3B1BF50B9D00F62B4E /* Debug */,
+				EE4A1E3C1BF50B9D00F62B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE4A1E3D1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4A1E3E1BF50B9D00F62B4E /* Debug */,
+				EE4A1E3F1BF50B9D00F62B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE4A1DFD1BF50B9C00F62B4E /* Project object */;
+}
