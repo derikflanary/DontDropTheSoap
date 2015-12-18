@@ -423,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DontDropTheSoap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoap;
@@ -434,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DontDropTheSoap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = derikflanary.DontDropTheSoap;
@@ -510,6 +512,7 @@
 				EE4A1E391BF50B9D00F62B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE4A1E3A1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +521,7 @@
 				EE4A1E3C1BF50B9D00F62B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE4A1E3D1BF50B9D00F62B4E /* Build configuration list for PBXNativeTarget "DontDropTheSoapUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +530,7 @@
 				EE4A1E3F1BF50B9D00F62B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
