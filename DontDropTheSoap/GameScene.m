@@ -45,7 +45,8 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     [self addChild:background];
     
     /* Setup your scene here */
-    self.soap = [[SKSpriteNode alloc]initWithColor:[UIColor whiteColor] size:CGSizeMake(50, 15)];
+    self.soap = [[SKSpriteNode alloc]initWithImageNamed:@"soap"];
+    self.soap.size = CGSizeMake(50, 15);
     self.soap.position = CGPointMake(self.view.frame.size.width/2, 100);
     self.soap.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.soap.size];
     self.soap.physicsBody.dynamic = YES;
@@ -58,7 +59,8 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.soap.zPosition = 1;
     [self addChild:self.soap];
     
-    self.dish = [[SKSpriteNode alloc]initWithColor:[UIColor lightGrayColor] size:CGSizeMake(120, 10)];
+    self.dish = [[SKSpriteNode alloc]initWithImageNamed:@"dish"];
+    self.dish.size = CGSizeMake(120, 7);
     self.dish.position = CGPointMake(self.view.frame.size.width/2, CGRectGetMinY(self.soap.frame));
     self.dish.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.dish.size];
     self.dish.physicsBody.dynamic = NO;
