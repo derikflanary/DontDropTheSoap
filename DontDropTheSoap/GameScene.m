@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import <CoreMotion/CoreMotion.h>
 
 typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     CollisionCategorySoap   = 0x1 << 0,
@@ -17,6 +18,8 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 
 @property (nonatomic, strong) SKSpriteNode *soap;
 @property (nonatomic, strong) SKSpriteNode *dish;
+@property (nonatomic, strong) CMMotionManager *motionManager;
+@property (nonatomic, assign) CGFloat xAcceleration;
 
 @end
 
@@ -25,10 +28,15 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 - (id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor blueColor];
+        
+        _motionManager = [[CMMotionManager alloc] init];
+        _motionManager.accelerometerUpdateInterval = 0.2;
+        // 2
     }
     return self;
 }
--(void)didMoveToView:(SKView *)view {
+
+- (void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     self.soap = [[SKSpriteNode alloc]initWithColor:[UIColor whiteColor] size:CGSizeMake(100, 30)];
     self.soap.position = CGPointMake(self.view.frame.size.width/2, 100);
@@ -38,6 +46,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.soap.physicsBody.usesPreciseCollisionDetection = YES;
     self.soap.physicsBody.categoryBitMask = CollisionCategorySoap;
     self.soap.physicsBody.contactTestBitMask = CollisionCategoryDish;
+    self.soap.physicsBody.mass = 0.02;
     [self addChild:self.soap];
     
     self.dish = [[SKSpriteNode alloc]initWithColor:[UIColor lightGrayColor] size:CGSizeMake(200, 10)];
@@ -51,18 +60,45 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     [self addChild:self.dish];
     
     self.physicsWorld.gravity = CGVectorMake(0.0f, -3.0f);
+    
+    [self startMonitoringAcceleration];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        
+- (void)startMonitoringAcceleration{
+    if (_motionManager.accelerometerAvailable) {
+        [_motionManager startAccelerometerUpdates];
+        NSLog(@"accelerometer updates on...");
     }
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+- (void)stopMonitoringAcceleration{
+    if (_motionManager.accelerometerAvailable && _motionManager.accelerometerActive) {
+        [_motionManager stopAccelerometerUpdates];
+        NSLog(@"accelerometer updates off...");
+    }
 }
+
+- (void)updateSoapPositionFromMotionManager{
+    CMAccelerometerData* data = _motionManager.accelerometerData;
+    if (fabs(data.acceleration.x) > 0.2) {
+        NSLog(@"acceleration value = %f",data.acceleration.y);
+        [self.soap.physicsBody applyForce:CGVectorMake(40.0 * data.acceleration.y, 0.0)];
+    }
+}
+
+- (void)update:(CFTimeInterval)currentTime {
+    /* Called before each frame is rendered */
+    [self updateSoapPositionFromMotionManager];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    /* Called when a touch begins */
+    
+//    for (UITouch *touch in touches) {
+//        
+//    }
+}
+
+
 
 @end
