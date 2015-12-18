@@ -37,6 +37,13 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 }
 
 - (void)didMoveToView:(SKView *)view {
+    
+    SKSpriteNode *background = [[SKSpriteNode alloc]initWithImageNamed:@"shower"];
+    background.size = self.view.frame.size;
+    background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    background.zPosition = 0;
+    [self addChild:background];
+    
     /* Setup your scene here */
     self.soap = [[SKSpriteNode alloc]initWithColor:[UIColor whiteColor] size:CGSizeMake(50, 15)];
     self.soap.position = CGPointMake(self.view.frame.size.width/2, 100);
@@ -48,6 +55,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.soap.physicsBody.contactTestBitMask = CollisionCategoryDish;
     self.soap.physicsBody.mass = 0.02;
     self.soap.physicsBody.friction = 0.0;
+    self.soap.zPosition = 1;
     [self addChild:self.soap];
     
     self.dish = [[SKSpriteNode alloc]initWithColor:[UIColor lightGrayColor] size:CGSizeMake(120, 10)];
@@ -58,6 +66,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.dish.physicsBody.usesPreciseCollisionDetection = YES;
     self.dish.physicsBody.categoryBitMask = CollisionCategoryDish;
     self.dish.physicsBody.contactTestBitMask = CollisionCategorySoap;
+    self.dish.zPosition = 1;
     [self addChild:self.dish];
     
     self.physicsWorld.gravity = CGVectorMake(0.0f, -3.0f);
