@@ -18,6 +18,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 
 @property (nonatomic, strong) SKSpriteNode *soap;
 @property (nonatomic, strong) SKSpriteNode *dish;
+@property (nonatomic, strong) SKLabelNode *touchStartNode;
 @property (nonatomic, strong) CMMotionManager *motionManager;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @property (nonatomic) NSTimeInterval startTime;
@@ -72,6 +73,17 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 
 - (void)setUpScene{
     /* Setup your scene here */
+    
+    self.touchStartNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
+    self.touchStartNode.fontSize = 54;
+    self.touchStartNode.fontColor = [SKColor blackColor];
+    self.touchStartNode.text = @"Touch To Start";
+    self.touchStartNode.zPosition = 3;
+    self.touchStartNode.position = CGPointMake(self.size.width/2, self.size.height/2);
+    [self addChild:self.touchStartNode];
+    [self.touchStartNode setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
+    [self.touchStartNode setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
+    
     self.soap = [[SKSpriteNode alloc]initWithImageNamed:@"soap"];
     self.soap.size = CGSizeMake(50, 15);
     self.soap.position = CGPointMake(self.view.frame.size.width/2, 150);
@@ -86,7 +98,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.soap.zPosition = 1;
     
     self.dish = [[SKSpriteNode alloc]initWithImageNamed:@"dish"];
-    self.dish.size = CGSizeMake(120, 7);
+    self.dish.size = CGSizeMake(90, 7);
     self.dish.position = CGPointMake(self.view.frame.size.width/2, CGRectGetMinY(self.soap.frame) - 50);
     self.dish.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.dish.size];
     self.dish.physicsBody.dynamic = NO;
@@ -94,6 +106,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.dish.physicsBody.usesPreciseCollisionDetection = YES;
     self.dish.physicsBody.categoryBitMask = CollisionCategoryDish;
     self.dish.physicsBody.contactTestBitMask = CollisionCategorySoap;
+    self.dish.physicsBody.friction = 0.0;
     self.dish.zPosition = 1;
     [self addChild:self.dish];
     
@@ -101,6 +114,17 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.physicsWorld.gravity = CGVectorMake(0.0f, -5.0f);
     
 
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    if (!self.gameStarted) {
+        [self.touchStartNode removeFromParent];
+        [self addChild:self.soap];
+        [self startMonitoringAcceleration];
+        self.startGame = YES;
+        
+    }
 }
 
 - (void)startMonitoringAcceleration{
@@ -186,15 +210,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 }
 
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (!self.gameStarted) {
-        [self addChild:self.soap];
-        [self startMonitoringAcceleration];
-        self.startGame = YES;
-        
-    }
-}
+
 
 
 
