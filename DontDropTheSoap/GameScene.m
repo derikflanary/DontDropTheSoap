@@ -22,6 +22,8 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 @property (nonatomic, strong) CMMotionManager *motionManager;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @property (nonatomic) NSTimeInterval startTime;
+@property (nonatomic) NSTimeInterval pauseTime;
+@property (nonatomic) NSTimeInterval currentTime;
 @property (nonatomic, strong) UIButton *restartButton;
 @property (nonatomic, assign) BOOL gameStarted;
 @property (nonatomic, assign) BOOL startGame;
@@ -51,13 +53,12 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     background.zPosition = 0;
     [self addChild:background];
     
-    self.restartButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, 10, 100, 20)];
+    self.restartButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, CGRectGetMaxY(self.frame) - 40, 100, 20)];
     [self.restartButton setTitle:@"Restart" forState:UIControlStateNormal];
     [self.restartButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.restartButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
     self.restartButton.titleLabel.font = [UIFont boldSystemFontOfSize:24];
     [self.restartButton addTarget:self action:@selector(restartGame) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.restartButton];
     
     self.timerNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
     self.timerNode.fontSize = 40;
@@ -68,6 +69,9 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.timerNode.zPosition = 2;
     [self addChild:self.timerNode];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseGame) name:@"PauseGame" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unpauseGame) name:@"UnpauseGame" object:nil];
+
     [self setUpScene];
 }
 
@@ -123,8 +127,10 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
         [self addChild:self.soap];
         [self startMonitoringAcceleration];
         self.startGame = YES;
+        [self.view addSubview:self.restartButton];
         
     }
+    
 }
 
 - (void)startMonitoringAcceleration{
@@ -152,9 +158,15 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
 - (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     [self updateSoapPositionFromMotionManager];
+    self.currentTime = currentTime;
+
+    if (self.pauseTime != 0) {
+        self.startTime = self.startTime + (self.currentTime - self.pauseTime);
+        self.pauseTime = 0;
+    }
     
     if (self.startGame) {
-        self.startTime = currentTime;
+        self.startTime = self.currentTime;
         self.startGame = NO;
         self.gameStarted = YES;
         self.lastUpdateTimeInterval = 0;
@@ -162,11 +174,11 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     
     CFTimeInterval timeSinceLast;
     if (self.gameStarted && !self.gameOver) {
-        self.timerNode.text = [NSString stringWithFormat:@"%i", (int)(currentTime - self.startTime)];
-        timeSinceLast = currentTime - self.lastUpdateTimeInterval;
+        self.timerNode.text = [NSString stringWithFormat:@"%i", (int)(self.currentTime - self.startTime)];
+        timeSinceLast = self.currentTime - self.lastUpdateTimeInterval;
     }
     
-    if (timeSinceLast > 1.0) {
+    if (timeSinceLast > 3.0) {
         [self applyRandomForceToSoap];
         self.lastUpdateTimeInterval = currentTime;
     }
@@ -188,7 +200,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
         r = r * -1;
     }
     
-    [self.soap.physicsBody applyForce:CGVectorMake(100.0 * r, 0.0)];
+    [self.soap.physicsBody applyForce:CGVectorMake(200.0 * r, 0.0)];
 
 }
 
@@ -209,9 +221,17 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     [self setUpScene];
 }
 
+- (void)pauseGame{
+    self.pauseTime = self.currentTime;
+    self.view.paused = YES;
+}
 
-
-
+- (void)unpauseGame{
+    self.view.paused = NO;
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 
 @end
