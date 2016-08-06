@@ -89,7 +89,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     [self.touchStartNode setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
     
     self.soap = [[SKSpriteNode alloc]initWithImageNamed:@"soap"];
-    self.soap.size = CGSizeMake(50, 15);
+    self.soap.size = CGSizeMake(100, 15);
     self.soap.position = CGPointMake(self.view.frame.size.width/2, 150);
     self.soap.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.soap.size];
     self.soap.physicsBody.dynamic = YES;
@@ -102,7 +102,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
     self.soap.zPosition = 1;
     
     self.dish = [[SKSpriteNode alloc]initWithImageNamed:@"dish"];
-    self.dish.size = CGSizeMake(90, 7);
+    self.dish.size = CGSizeMake(105, 7);
     self.dish.position = CGPointMake(self.view.frame.size.width/2, CGRectGetMinY(self.soap.frame) - 50);
     self.dish.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.dish.size];
     self.dish.physicsBody.dynamic = NO;
@@ -200,7 +200,7 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory) {
         r = r * -1;
     }
     
-    [self.soap.physicsBody applyForce:CGVectorMake(200.0 * r, 0.0)];
+    [self.soap.physicsBody applyForce:CGVectorMake(50.0 * r, 0.0)];
 
 }
 
